@@ -36,7 +36,7 @@ const Contact = () => {
               setError(false);   // Reset error
             },
             (error) => {
-              setError(true);    // Set error to true on failure
+              setError(true);   
               setSuccess(false); // Reset success
             },
           );
