@@ -1,0 +1,126 @@
+@import "../../app.scss";
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+
+  .navbar {
+    width: 100vw;
+    height: 120px;
+   
+    .wrapperr {
+      display: flex;
+      align-items: center;      
+      justify-content: center; 
+      gap: 20vw;              
+      max-width: 1366px;
+      height: 100%;            
+    
+    }
+  }
+
+
+  .wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .socialmedia {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15vh;
+
+      @include mobile {
+        margin-top: 40vh;
+        margin-right: 3vw;
+      }
+
+      .circle {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgb(61, 121, 242);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vh;
+      }
+    }
+
+    .textContainer {
+      margin-top: 20vh;
+      width: 50%;
+      margin-left: 5vw;
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 51px;
+      }
+
+      h2 {
+        font-size: 30px;
+        letter-spacing: 5px;
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      h1 {
+        font-size: 60px;
+        color: rgb(61, 121, 242);
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+
+      h4 {
+        letter-spacing: 3px;
+      }
+
+      .buttons {
+        margin-top: 48px;
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+          @include mobile {
+            margin-left: 10px;
+          }
+        }
+      }
+      img {
+        width: 50px;
+        // margin-top: -20vh;
+        @include mobile {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff12;
+    width: 50%;
+    font-weight: bold;
+  }
+}

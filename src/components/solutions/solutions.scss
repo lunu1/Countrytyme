@@ -1,0 +1,108 @@
+@import "../../app.scss";
+
+
+.allcontainer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:50px;
+  margin-top: 2vh;
+
+  @include mobile{
+    margin-top: 20vh;
+  }
+
+  .serivessection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    
+    
+    
+    .serviceText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      
+      h1 {
+        font-size: 30px;
+        color: rgb(61, 121, 242);
+    }
+    
+    button {
+        height: 30px;
+        width: 8vw;
+        background-color: rgb(61, 121, 242);
+        color: white;
+        border-radius: 10px;
+        // border-top: 20%;
+        border: none;
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 5px;
+
+        @include mobile {
+          width: 30vw;
+        }
+      }
+
+      .ServiceHeading {
+      display: flex;
+      gap: 10px;
+
+     
+    }
+  }
+}
+
+.togglecontainer {
+    display: flex;
+    gap: 10px; /* Spacing between columns */
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .row{
+    display: flex;
+    gap:10px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(117, 167, 231);
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Show pointer on hover */
+    height: 15vw;
+    width:33vh;
+    color:black;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      height: 22vh;
+    }
+
+  }
+
+ 
+  
+  .column:hover {
+    background-color: rgb(61, 121, 242); /* Change color to blue on hover */
+    color: white; /* Optional: Change text color to white */
+  }
+  
+
+}

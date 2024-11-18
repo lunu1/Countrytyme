@@ -1,0 +1,133 @@
+@import "./technologies.scss";
+@import "../../app.scss";
+
+.aboutdetails {
+  background-color: #efe6e6;
+
+  .wrapperabout {
+    color: black;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .aboutsidebar {
+      display: flex;
+      flex-direction: column;
+      width: 20vw;
+      height: 45vh;
+      gap: 10px;
+      margin-top: 14vh;
+      padding-left: 5vw;
+
+      @include mobile {
+        padding: 0;
+        width: 90vw;
+        height: 30vh;
+        margin-top: 0;
+        align-items: center;
+      }
+
+      .sidebar-link {
+        display: flex;
+        text-decoration: none;
+        color: grey; // default text color
+        font-size: 1.1rem;
+        // padding: 10px;
+        position: relative;
+        transition: all 0.3s ease; // Smooth transition for color and positioning
+        z-index: 999;
+        .icon {
+          //   margin-right: 5px;
+          margin-top: 2px;
+          transform: translateX(-30px); // Initially hide icon far to the left
+          opacity: 0;
+          transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .link-text {
+          display: inline-block;
+          font-size: 15px;
+          transition: transform 0.4s ease, color 0.4s ease;
+          @include mobile {
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          color: rgba(1, 164, 255, 255); // Text color on hover
+
+          .icon {
+            transform: translateX(0); // Icon slides in from the left
+            opacity: 1; // Fade in icon
+          }
+
+          .link-text {
+            transform: translateX(10px); // Text moves slightly to the right
+            color: rgba(1, 164, 255, 255); // Change text color
+          }
+        }
+        &.active {
+          color: rgba(1, 164, 255, 255); ; // Change the color for the active link
+          font-weight: bold; // Optionally make the active link bold
+
+          .icon {
+            transform: translateX(0); // Icon slides in from the left
+            opacity: 1; // Fade in icon
+            margin-right: 10px;
+          }
+
+        }
+      }
+    }
+    .aboutcontent {
+      padding: 20px;
+      margin-left: 20px;
+      margin-top: 3vh;
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        margin-top: 9vh;
+        width: 99vw;
+        padding: 0;
+      }
+
+      h1 {
+        color: rgba(1, 164, 255, 255);
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+  .footerabout {
+    padding: 0;
+    background: #0c0c1d;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+    margin-top: 30px;
+
+    @include mobile {
+      margin-top: 30vh;
+    }
+  }
+
+  .techsvg {
+    // background: #0c0c1d;
+    // height: 40vh;
+    // padding-top: 5px;
+    color: #0c0c1d;
+    margin-bottom: 5vh;
+    margin-top: -50px;
+  }
+}

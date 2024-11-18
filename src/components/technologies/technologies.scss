@@ -1,0 +1,184 @@
+@import "../../app.scss";
+
+
+
+  .skill {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: center;
+
+    @include mobile {
+      margin-top: 18vh;
+    }
+
+    h1 {
+      font-size: 40px;
+      span {
+        color: rgb(61, 121, 242);
+      }
+    }
+
+    .svg {
+      display: flex;
+      flex-direction: row;
+      margin-top: 5vh;
+      justify-content: center;
+      gap: 5vw;
+      font-weight: bold;
+      font-size: 10px;
+      @include mobile {
+        width:98vw;
+      }
+  }
+
+  .Operation,
+  .Globe,
+  .Truck,
+  .Safety {
+    display: flex;
+    width: 158px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .svgtext {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.technologies {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh; // Full height of the viewport
+  
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50vh;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 3vw;
+    width:70vw;
+
+    @include mobile {
+      flex-direction: column;
+      // margin-top: -15vh;
+    }
+
+    .AboutPhoto {
+      position: relative;
+      width: 400px;
+      height: auto;
+      object-fit: contain;
+    
+      img {
+        width: 100%;
+        height: auto;
+      }
+    
+      // Top-left corner border
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(61, 121, 242);
+      }
+    
+      &::before {
+        bottom: 0;
+        right: 0;
+        height: 4px;
+        width: 100%;
+        border-right: 5px solid rgb(61, 121, 242);
+        border-bottom: 5px solid rgb(61, 121, 242);
+        box-sizing: border-box;
+      }
+    
+      &::after {
+        bottom: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        border-bottom: 5px solid rgb(61, 121, 242);
+        border-right: 5px solid rgb(61, 121, 242);
+        box-sizing: border-box;
+      }
+    
+      @include mobile {
+        width: 100%; // Adjust for mobile view if necessary
+    
+        img {
+          width: 100%;
+          height: auto;
+        }
+    
+        // Adjust pseudo-elements for mobile view
+        &::before {
+          height: 4px; // Adjust thickness if needed
+          width: 100%; // Ensure full width for mobile
+        }
+    
+        &::after {
+          width: 4px; // Adjust thickness if needed
+          height: 100%; // Ensure full height for mobile
+        }
+      }
+    }
+    
+    .AboutText {
+      width: 600px;
+      @include mobile {
+        width: 90vw;
+      }
+
+      p {
+        color: gray;
+        font-size: 15px;
+        margin-top: 20px;
+
+        @include mobile {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+
+      h1 {
+        color: rgb(61, 121, 242);
+        font-size: 40px;
+      }
+      h3 {
+        color: rgb(61, 121, 242);
+      }
+
+      button {
+        height: 30px;
+        width: 8vw;
+        background-color: rgb(61, 121, 242);
+        color: white;
+        border-radius: 10px;
+        // border-top: 20%;
+        border: none;
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 5px;
+
+        @include mobile {
+          width: 30vw;
+        }
+
+      }
+    }
+  }
+
+  
+
+  
+}

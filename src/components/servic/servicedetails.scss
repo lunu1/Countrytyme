@@ -1,0 +1,83 @@
+@import "../../app.scss";
+
+.solutionsDetails {
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    background: #efe6e6;
+    color: black;
+    overflow-x: hidden;
+
+    .imageonTop {
+        height: 60vh;
+        width: 100%; 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .navbarHome {
+            z-index: 1;
+            position: absolute;
+            width: 100%; 
+        }
+    }
+
+    .Solutiontext {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin-left: 14%;
+        margin-top: 5vh;
+        flex-direction: column;
+
+        @include mobile{        
+            width:90%;
+            margin-left: 7vw;
+        }
+
+        .points {
+            margin-top: 5px;
+            margin-bottom: 50px;
+
+            .wheels {
+                margin-top: 7px;
+            }
+
+            .pointheading {
+                display: flex;
+                gap: 10px;
+                color: rgb(61, 121, 242);
+                h2{
+                   @include mobile {
+                    font-size: 23px;
+                   }
+                }
+            }
+
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .cardsliderfooter{
+        @include mobile {
+            margin-top: 8vh;
+            padding-bottom: 8vh;
+        }
+    }
+}
+
